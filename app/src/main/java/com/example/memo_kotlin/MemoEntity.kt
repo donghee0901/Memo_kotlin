@@ -6,13 +6,8 @@ import androidx.room.PrimaryKey
 
 
 @Entity
-class MemoEntity {
-    @PrimaryKey(autoGenerate = true)
-    var id = 0
-
-    @ColumnInfo(name = "title")
-    var title: String? = null
-
-    @ColumnInfo(name = "content")
-    var content: String? = null
-}
+data class MemoEntity (
+    @PrimaryKey(autoGenerate = true) val id : Int,
+    @ColumnInfo(name = "title") var title: String,
+    @ColumnInfo(name = "content") var content: String
+)
