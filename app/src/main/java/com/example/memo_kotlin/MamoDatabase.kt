@@ -12,7 +12,7 @@ abstract class MemoDatabase : RoomDatabase() {
 
     companion object {
         private var instance: MemoDatabase? = null
-        fun getInstance(context: Context?): MemoDatabase? {
+        fun getInstance(context: Context): MemoDatabase? {
             if (instance == null) {
                 instance = Room.databaseBuilder(context, MemoDatabase::class.java, "database-name").fallbackToDestructiveMigration().build()
             }
