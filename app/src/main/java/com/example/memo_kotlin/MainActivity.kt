@@ -10,11 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import kotlinx.android.synthetic.main.activity_main.*
 
-var db: MemoDatabase? = null
-var MemoData: List<MemoEntity>? = null
-var adapter: MemoAdapter? = null
 
 class MainActivity : AppCompatActivity() {
+
+    var db: MemoDatabase? = null
+    var MemoData: List<MemoEntity>? = null
+    var adapter: MemoAdapter? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
